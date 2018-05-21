@@ -1,16 +1,20 @@
 require 'rails_helper'
 
-describe 'when user visits home  page' do
-  scenario 'a user can create new idea by filling out a form' do
-    category = Category.create!(name: 'Information')
-    category1 = Category.create!(name: 'Information1')
-    category2 = Category.create!(name: 'Information2')
+describe 'when user visits categories path' do
+  scenario 'a user can create new category ' do
 
-    content = 'This is my idea'
-    title = 'idea1'
+    visit categories_path
+    click_on 'Create New Category'
 
-    visit ideas_path
+    expect(current_path).to eq(new_category_path)
 
-    click_on 'Create Idea'
+    name = 'Information'
 
-    expect(current_path).to eq(new_idea_path)
+    fill_in 'category[name]', with: name
+
+    click_on 'Create Category'
+
+    expect(current_path).to eq(category_path(Category.last))
+    expect(page).to have_content(name)
+  end
+end

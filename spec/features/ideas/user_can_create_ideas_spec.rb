@@ -15,7 +15,6 @@ describe 'when user visits home  page' do
 
     expect(current_path).to eq(new_idea_path)
 
-    save_and_open_page
 
 
     fill_in 'idea[content]', with: content
