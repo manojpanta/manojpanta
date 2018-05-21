@@ -11,8 +11,8 @@ describe 'when user visits hompage' do
     username = 'Manoj'
     password = '1234'
 
-    fill_in 'user[username]', with: username
-    fill_in 'user[password]', with: password
+    fill_in 'user_username', with: username
+    fill_in 'user_password', with: password
 
     click_on 'Create User'
 
