@@ -10,12 +10,10 @@ describe 'when user visits user show page' do
     category2 = Category.create!(name: 'Information2')
 
     user = User.create(username: username, password: password)
-    idea1 = Idea.create(user: user, title: 'walking', content: 'walk slowly', category: category)
-    idea2 = Idea.create(user: user, title: 'running', content: 'run slowly', category: category1)
+    idea1 = Idea.create(user: user, title: title, content: 'walk slowly', category: category)
+    idea2 = Idea.create(user: user, title: content, content: 'run slowly', category: category1)
     idea3 = Idea.create(user: user, title: 'climbing', content: 'climb slowly', category: category2)
     idea4 = Idea.create(user: user, title: 'jogging', content: 'jog slowly', category: category)
-
-
 
     visit root_path
     click_on 'Log In'
@@ -23,7 +21,6 @@ describe 'when user visits user show page' do
     fill_in 'username', with: username
     fill_in 'password', with: password
     click_on 'Log In'
-
 
     expect(current_path).to eq(user_path(user))
 
@@ -40,7 +37,7 @@ describe 'when user visits user show page' do
     category = Category.create!(name: 'Information')
 
     user = User.create(username: username, password: password)
-    idea = Idea.create(user: user, title: 'walking', content: 'walk slowly', category: category)
+    idea = Idea.create(user: user, title: title, content: content, category: category)
 
     visit root_path
     click_on 'Log In'
@@ -64,7 +61,7 @@ describe 'when user visits user show page' do
     category = Category.create!(name: 'Information')
 
     user = User.create(username: username, password: password)
-    idea = Idea.create(user: user, title: 'walking', content: 'walk slowly', category: category)
+    idea = Idea.create(user: user, title: title, content: content, category: category)
 
     visit root_path
     click_on 'Log In'
@@ -87,7 +84,7 @@ describe 'when user visits user show page' do
     content1 = 'This is not my idea'
     title1 = 'idea2'
 
-    category = Category.create!(name: 'Information')
+    Category.create!(name: 'Information')
     category = Category.create!(name: 'Technology')
 
     user = User.create(username: username, password: password)
@@ -106,7 +103,6 @@ describe 'when user visits user show page' do
     fill_in 'idea[title]', with: title1
     select category.name, from: 'idea_category_id'
     click_on 'Update Idea'
-
 
     expect(current_path).to eq(user_idea_path(user, idea))
     expect(page).to have_content("#{title1} Updated!")

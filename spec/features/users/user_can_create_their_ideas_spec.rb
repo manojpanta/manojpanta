@@ -6,9 +6,9 @@ describe 'when user visits user home  page' do
     password = '1234'
     content = 'This is my idea'
     title = 'idea1'
-    category = Category.create!(name: 'Information')
-    category1 = Category.create!(name: 'Information1')
-    category2 = Category.create!(name: 'Information2')
+    Category.create!(name: 'Information')
+    Category.create!(name: 'Information1')
+    Category.create!(name: 'Information2')
     user = User.create(username: username, password: password)
 
     visit root_path

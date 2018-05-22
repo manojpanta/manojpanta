@@ -4,7 +4,7 @@ describe 'when user visits categories path' do
   scenario 'a user can delete a category ' do
     name = 'Information'
 
-    category = Category.create(name: name)
+    Category.create(name: name)
 
     visit categories_path
 
@@ -35,7 +35,5 @@ describe 'when user visits categories path' do
     expect(current_path).to eq(category_path(category))
     expect(page).to have_content(name1)
     expect(page).to_not have_content(name)
-
-
   end
 end

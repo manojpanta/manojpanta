@@ -12,6 +12,6 @@ describe 'when admin visits images  page ' do
 
     expect(current_path).to eq(images_path)
 
-    expect(page).to_not have_content(title)
+    expect(page).to_not have_content(image.title)
   end
 end

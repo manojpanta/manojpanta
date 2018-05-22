@@ -5,10 +5,8 @@ describe 'when user visits idea page' do
     category = Category.create!(name: 'Information')
     user = User.create(username: 'manoj', password: '1234')
 
-
     title = 'idea1'
     content = 'This is my idea'
-
 
     idea = Idea.create(user: user, category: category, title: title, content: content)
 

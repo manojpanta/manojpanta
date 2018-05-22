@@ -27,17 +27,16 @@ describe 'when admin images home page ' do
     title3 = 'top pic'
     url = 'https://imagejournal.org/wp-content/uploads/bb-plugin/cache/23466317216_b99485ba14_o-panorama.jpg'
 
-    image = Image.create(title: title, url: url)
-    image = Image.create(title: title1, url: url)
-    image = Image.create(title: title2, url: url)
-    image = Image.create(title: title3, url: url)
-
+    image1 = Image.create(title: title, url: url)
+    image2 = Image.create(title: title1, url: url)
+    image3 = Image.create(title: title2, url: url)
+    image4 = Image.create(title: title3, url: url)
 
     visit images_path
 
-    expect(page).to have_content(title)
-    expect(page).to have_content(title1)
-    expect(page).to have_content(title2)
-    expect(page).to have_content(title3)
+    expect(page).to have_content(image1.title)
+    expect(page).to have_content(image2.title)
+    expect(page).to have_content(image3.title)
+    expect(page).to have_content(image4.title)
   end
 end

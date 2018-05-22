@@ -2,9 +2,9 @@ require 'rails_helper'
 
 describe 'when user visits home  page' do
   scenario 'a user can create new idea by filling out a form' do
-    category = Category.create!(name: 'Information')
-    category1 = Category.create!(name: 'Information1')
-    category2 = Category.create!(name: 'Information2')
+    Category.create!(name: 'Information')
+    Category.create!(name: 'Information1')
+    Category.create!(name: 'Information2')
     user = User.create!(username: 'manoj', password: '123')
 
     content = 'This is my idea'

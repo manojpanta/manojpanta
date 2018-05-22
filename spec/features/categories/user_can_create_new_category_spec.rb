@@ -2,7 +2,6 @@ require 'rails_helper'
 
 describe 'when user visits categories path' do
   scenario 'a user can create new category ' do
-
     visit categories_path
     click_on 'Create New Category'
 

@@ -1,6 +1,4 @@
-
 require 'rails_helper'
-
 describe Idea do
   describe 'validations' do
     context 'invalid attributes' do
@@ -9,12 +7,14 @@ describe Idea do
         expect(idea).to be_invalid
       end
     end
+
     context 'invalid attributes' do
       it 'is invalid without a content' do
         idea = Idea.new(title: 'idea')
         expect(idea).to be_invalid
       end
     end
+
     context 'valid attributes' do
       it 'is valid with content and a title' do
         category = Category.create(name: 'Information')

@@ -1,8 +1,6 @@
 require 'rails_helper'
-
 describe 'when user visits hompage' do
   scenario 'a user can sign up to be a new user' do
-
     visit root_path
     click_on 'Sign Up'
 

@@ -1,5 +1,4 @@
 require 'rails_helper'
-
 describe Image do
   describe 'validations' do
     context 'invalid attributes' do
@@ -16,7 +15,7 @@ describe Image do
     end
     context 'valid attributes' do
       it 'is valid with url and a title' do
-        image = Image.new(title: 'title1',url: 'https://imagejournal.org/wp-content/uploads/bb-plugin/cache/23466317216_b99485ba14_o-panorama.jpg')
+        image = Image.new(title: 'title1', url: 'https://imagejournal.org/wp-content/uploads/bb-plugin/cache/23466317216_b99485ba14_o-panorama.jpg')
         expect(image).to be_valid
       end
     end

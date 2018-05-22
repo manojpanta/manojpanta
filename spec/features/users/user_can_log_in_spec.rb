@@ -11,7 +11,6 @@ describe 'when user visits user home  page' do
 
     expect(current_path).to eq(login_path)
 
-
     fill_in 'username', with: username
     fill_in 'password', with: '1234'
     click_on 'Log In'
@@ -24,13 +23,12 @@ describe 'when user visits user home  page' do
     username = 'manoj'
     password = '1234'
     flash_message = 'Username and Password doesnt match.'
-    user = User.create(username: username, password: password)
+    User.create(username: username, password: password)
 
     visit root_path
     click_on 'Log In'
 
     expect(current_path).to eq(login_path)
-
 
     fill_in 'username', with: username
     fill_in 'password', with: '12345'
