@@ -1,7 +1,14 @@
-<%= link_to 'Create New Image', new_image_path %>
+<%if current_admin?%>
+<%= link_to 'Create New Image', new_admin_image_path %>
+<%end%>
 <% @images.each do |i| %>
   <div style="height:500px;width:100%;background:url('<%=i.url%>');background-size:cover;">
   </div>
-  <%=i.title %>
-  <%=link_to 'Delete', image_path(i), method: :delete %>
+
+  <%if current_admin?%>
+  <%= link_to i.title, admin_image_path(i) %>
+    <%=link_to 'Delete', admin_image_path(i), method: :delete %>
+  <%else%>
+    <%=i.title%>
+  <%end%>
 <%end%>

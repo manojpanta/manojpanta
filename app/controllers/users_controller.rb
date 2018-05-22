@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-
   def new
     @user = User.new
   end
@@ -17,14 +16,16 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @ideas = @user.ideas
+    if @user == current_user
+      @ideas = @user.ideas
+    else
+      render :file => 'public/404.html'
+    end
   end
-
 
   private
 
   def user_params
     params.require(:user).permit(:username, :password)
   end
-
 end

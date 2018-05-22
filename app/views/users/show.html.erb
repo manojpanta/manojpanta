@@ -1,6 +1,8 @@
 <h1> Welcome <%=current_user.username %> </h1>
 <%= link_to 'Log Out', logout_path %>
 <%= link_to 'Create New Idea', new_user_idea_path(current_user) %>
+<%= link_to 'Images', images_path %>
+<%= link_to 'Categories', categories_path %>
 
 <%@ideas.each do |i| %>
 <ul>
