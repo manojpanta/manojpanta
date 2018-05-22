@@ -75,8 +75,45 @@ describe 'when user visits user show page' do
 
     click_on 'Delete'
 
-    expect(current_path).to eq(user_ideas_path(user))
-
+    expect(current_path).to eq(user_path(user))
     expect(page).to have_content("#{idea.title} Deleted!")
+  end
+  scenario 'user can update and idea by clicking on edit next to idea' do
+    username = 'manoj'
+    password = '1234'
+    content = 'This is my idea'
+    title = 'idea1'
+
+    content1 = 'This is not my idea'
+    title1 = 'idea2'
+
+    category = Category.create!(name: 'Information')
+    category = Category.create!(name: 'Technology')
+
+    user = User.create(username: username, password: password)
+    idea = Idea.create(user: user, title: 'walking', content: 'walk slowly', category: category)
+
+    visit root_path
+    click_on 'Log In'
+
+    fill_in 'username', with: username
+    fill_in 'password', with: password
+    click_on 'Log In'
+
+    click_on 'Edit'
+
+    fill_in 'idea[content]', with: content1
+    fill_in 'idea[title]', with: title1
+    select category.name, from: 'idea_category_id'
+    click_on 'Update Idea'
+
+
+    expect(current_path).to eq(user_idea_path(user, idea))
+    expect(page).to have_content("#{title1} Updated!")
+    expect(page).to have_content(content1)
+    expect(page).to have_content(title1)
+
+    expect(page).to_not have_content(content)
+    expect(page).to_not have_content(title)
   end
 end

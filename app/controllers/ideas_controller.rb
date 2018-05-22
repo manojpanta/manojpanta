@@ -54,17 +54,12 @@ class IdeasController < ApplicationController
     idea.destroy
 
     flash[:success] = "#{idea.title} Deleted!"
-    redirect_to user_ideas_path(@user)
+    redirect_to user_path(@user)
   end
-
 
   private
 
   def ideas_params
     params.require(:idea).permit(:title, :content, :category_id)
   end
-
-
-
-
 end
