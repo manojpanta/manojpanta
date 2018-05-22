@@ -10,7 +10,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to user_path(@user)
     else
-      flash[:failed] = 'Username already taken!'
+      flash[:failed] = 'Username Already Taken!'
       render :new
     end
   end
