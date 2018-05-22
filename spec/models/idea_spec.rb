@@ -18,7 +18,9 @@ describe Idea do
     context 'valid attributes' do
       it 'is valid with content and a title' do
         category = Category.create(name: 'Information')
-        idea = Idea.new(category: category,title: 'idea', content: 'this is an idea')
+        user = User.create(username: 'manoj', password: '1234')
+
+        idea = Idea.new(user: user, category: category,title: 'idea', content: 'this is an idea')
         expect(idea).to be_valid
       end
     end

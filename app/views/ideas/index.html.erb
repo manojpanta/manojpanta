@@ -1,8 +1,9 @@
-<%= link_to  'Create Idea', new_idea_path %>
+<%= link_to  'Create Idea', new_user_idea_path(@user) %>
 
 <% @ideas.each do |i| %>
 <ul>
- <%= i.title %>
- <%= i.content %>
+  <li>
+ <%= link_to i.title, user_idea_path(@user,i) %>
+</li>
 </ul>
 <%end%>

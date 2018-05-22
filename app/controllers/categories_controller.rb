@@ -23,8 +23,23 @@ class CategoriesController < ApplicationController
 
   def destroy
     @category = Category.find(params[:id])
-    @category.destroy
-    redirect_to categories_path
+    if @category.destroy
+      flash[:success] = "#{@category} Deleted"
+      redirect_to categories_path
+    else
+      flash[:success] = "#{@category} Can Not Be Deleted Because It is associated with at least one Idea"
+    end
+  end
+
+  def edit
+    @category = Category.find(params[:id])
+  end
+
+  def update
+    @category = Category.find(params[:id])
+    @category.update(category_params)
+    flash[:success] = "#{@category.name} has been Updated!"
+    redirect_to category_path(@category)
   end
 
   private

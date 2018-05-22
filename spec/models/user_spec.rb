@@ -19,5 +19,12 @@ describe User do
         expect(user).to be_valid
       end
     end
+    context 'relationships' do
+      it 'should respond to ideas' do
+        category = Category.create(name: 'Information')
+        user = User.create(username: 'manoj', password: '1234')
+        expect(user).to respond_to(:ideas)
+      end
+    end
   end
 end
