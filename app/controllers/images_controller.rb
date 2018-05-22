@@ -1,4 +1,5 @@
 class ImagesController < ApplicationController
+  before_action :set_image, only: %i[show destroy]
   def index
     @images = Image.all
   end
@@ -17,13 +18,10 @@ class ImagesController < ApplicationController
     end
   end
 
-  def show
-    @image = Image.find(params[:id])
-  end
+  def show; end
 
   def destroy
-    image = Image.find(params[:id])
-    image.destroy
+    @image.destroy
     redirect_to images_path
   end
 
@@ -32,5 +30,9 @@ class ImagesController < ApplicationController
 
   def image_params
     params.require(:image).permit(:title, :url)
+  end
+
+  def set_image
+    @image = Image.find(params[:id])
   end
 end
