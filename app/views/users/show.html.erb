@@ -1,2 +1,2 @@
-<%= "Welcome #{@user.username}" %>
-<%= link_to 'Log Out' %>
+<h1> Welcome <%=current_user.username %> </h1>
+<%= link_to 'Log Out', logout_path %>

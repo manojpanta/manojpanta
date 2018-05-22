@@ -35,7 +35,7 @@ describe 'when user visits idea page' do
     category = Category.create!(name: 'Information')
 
     content = 'This is my idea'
-    title = 'idea1 '
+    title = 'idea1'
 
     idea = Idea.create(category: category, title: title, content: content)
 
@@ -45,6 +45,6 @@ describe 'when user visits idea page' do
 
     expect(current_path).to eq(ideas_path)
 
-    expect(page).to_not have_content(title)
+    expect(page).to have_content("#{title} Deleted!")
   end
 end
