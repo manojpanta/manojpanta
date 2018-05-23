@@ -2,6 +2,9 @@ class ImagesController < ApplicationController
   before_action :current_user?
 
   def index
+    if params[:idea_id]
+      @idea = Idea.find(params[:idea_id])
+    end
     @images = Image.all
   end
 

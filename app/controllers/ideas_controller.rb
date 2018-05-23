@@ -31,12 +31,17 @@ class IdeasController < ApplicationController
   end
 
   def update
-    @idea.update(ideas_params)
-    if @idea.save
-      flash[:success] = "#{@idea.title} Updated!"
-      redirect_to user_idea_path(@user, @idea)
+    if params[:image_id]
+      @idea.images << Image.find(params[:image_id])
+      redirect_to user_idea_path(current_user, @idea)
     else
-      render :edit
+      @idea.update(ideas_params)
+      if @idea.save
+        flash[:success] = "#{@idea.title} Updated!"
+        redirect_to user_idea_path(@user, @idea)
+      else
+        render :edit
+      end
     end
   end
 
