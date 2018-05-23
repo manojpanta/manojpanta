@@ -8,7 +8,8 @@
   <%if current_admin?%>
   <%= link_to i.title, admin_image_path(i) %>
     <%=link_to 'Delete', admin_image_path(i), method: :delete %>
-  <%elsif @idea%>
+  <%end%>
+  <%if @idea%>
     <div class="favorite">
       <%= form_tag user_idea_path(current_user, @idea), method: 'patch' do %>
         <%= hidden_field_tag :image_id, i.id  %>
@@ -18,4 +19,3 @@
   <%end%>
 
 <%end%>
-idea.images << image
