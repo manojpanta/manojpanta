@@ -1,0 +1,22 @@
+.visitor-nav {
+  display: flex;
+  height: 500px;
+  width: 100%;
+  border: 10px;
+  background-image: url('http://ideabox.be/wp-content/uploads/2017/04/cropped-ideabox-logo.png');
+  background-size: cover;
+  justify-content: space-between;
+}
+
+
+
+
+a {
+  text-shadow: 2px 2px #FF0000;
+  float: right;
+  font-size: -webkit-xxx-large;
+  text-align: center;
+  text-decoration: none;
+  padding: 30px;
+  font-family: fantasy;
+}
