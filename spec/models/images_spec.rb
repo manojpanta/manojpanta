@@ -20,13 +20,13 @@ describe Image do
       end
     end
     it 'should respond to ideaimages' do
-      category = Category.create(name: 'Information')
+      Category.create(name: 'Information')
       image = Image.new(title: 'title1', url: 'https://imagejournal.org/wp-content/uploads/bb-plugin/cache/23466317216_b99485ba14_o-panorama.jpg')
-      expect(image).to respond_to(:ideas_images)
+      expect(image).to respond_to(:idea_images)
     end
 
     it 'should respond to ideas' do
-      category = Category.create(name: 'Information')
+      Category.create(name: 'Information')
       image = Image.new(title: 'title1', url: 'https://imagejournal.org/wp-content/uploads/bb-plugin/cache/23466317216_b99485ba14_o-panorama.jpg')
       expect(image).to respond_to(:ideas)
     end

@@ -1,5 +1,9 @@
 <%= @idea.title %>
 <%= @idea.content %>
+<%@images.each do |i| %>
+<div style="height:500px;width:100%;background:url('<%=i.url%>');background-size:cover;">
+</div>
+<%end%>
 
 <%= link_to 'Edit', edit_user_idea_path(@user, @idea) %>
 <%= link_to 'Delete', user_idea_path(@user, @idea), method: :delete %>

@@ -34,7 +34,7 @@ describe Idea do
       it 'should respond to ideaimages' do
         category = Category.create(name: 'Information')
         idea = Idea.new(category: category,title: 'idea', content: 'this is an idea')
-        expect(idea).to respond_to(:ideas_images)
+        expect(idea).to respond_to(:idea_images)
       end
 
       it 'should respond to images' do

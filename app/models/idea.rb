@@ -3,6 +3,6 @@ class Idea < ApplicationRecord
   validates :title, presence: true
   belongs_to :category
   belongs_to :user
-  has_many :ideas_images
-  has_many :images, through: :ideas_images
+  has_many :idea_images
+  has_many :images, through: :idea_images , dependent: :destroy
 end
