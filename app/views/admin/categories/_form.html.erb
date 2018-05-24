@@ -1,7 +1,11 @@
-<%= form_for [:admin, @category] do |f| %>
-<%= f.label  :name%>
-<%= f.text_field :name%>
 
-<%=f.submit%>
+<link rel="stylesheet" href="/categories/form.css" title="CSS" type="text/css"/>
+<div>
+  <%= form_for [:admin, @category] do |f| %>
+  <%= f.label  :name%>
+  <%= f.text_field :name%>
 
-<%end%>
+  <%=f.submit%>
+
+  <%end%>
+<div>
