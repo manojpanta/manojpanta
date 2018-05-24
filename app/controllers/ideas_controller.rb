@@ -1,7 +1,6 @@
 class IdeasController < ApplicationController
   before_action :set_idea, only: %i[show edit update destroy]
   before_action :set_user
-  before_action :current_user?
 
 
   def index
@@ -55,10 +54,6 @@ class IdeasController < ApplicationController
   end
 
   private
-  private
-  def current_user?
-    render :file => '/public/404' if session[:user_id] == nil
-  end
 
   def ideas_params
     params.require(:idea).permit(:title, :content, :category_id)

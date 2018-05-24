@@ -1,6 +1,4 @@
 class ImagesController < ApplicationController
-  before_action :current_user?
-
   def index
     if params[:idea_id]
       @idea = Idea.find(params[:idea_id])
@@ -11,10 +9,4 @@ class ImagesController < ApplicationController
   def show
     @image = Image.find(params[:id])
   end
-
-  private
-  def current_user?
-    render :file => '/public/404' if session[:user_id] == nil
-  end
-
 end

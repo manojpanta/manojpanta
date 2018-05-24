@@ -1,15 +1,23 @@
 .visitor-nav {
   display: flex;
-  height: 500px;
-  width: 100%;
-  border: 10px;
-  background-image: url('http://ideabox.be/wp-content/uploads/2017/04/cropped-ideabox-logo.png');
+  height: 100px;
+  background-image: url('http://fullercreative.com/wp-content/uploads/2014/05/2ideabox.jpg');
   background-size: cover;
   justify-content: space-between;
+  border-radius: 25px;
+  padding: 10px;
 }
 
+img {
+  border-radius: 25px;
+  max-width: 100%;
+  max-height: 80%;
+}
 
-
+.images {
+  width: fit-content;
+  margin: 25px;
+}
 
 a {
   text-shadow: 2px 2px #FF0000;
@@ -19,4 +27,8 @@ a {
   text-decoration: none;
   padding: 30px;
   font-family: fantasy;
+}
+
+body {
+  background-image: url('https://www.akuaroworld.com/wp-content/uploads/2016/11/programming.jpg');
 }
