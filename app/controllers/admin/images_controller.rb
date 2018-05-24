@@ -19,6 +19,7 @@ class Admin::ImagesController < Admin::BaseController
     redirect_to images_path
   end
 
+
   private
 
   def image_params

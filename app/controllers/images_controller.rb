@@ -13,8 +13,8 @@ class ImagesController < ApplicationController
   end
 
   private
-
   def current_user?
-    render file: '/public/404' unless current_user
+    render :file => '/public/404' if session[:user_id] == nil
   end
+
 end
