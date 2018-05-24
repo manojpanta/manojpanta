@@ -16,11 +16,11 @@ class Admin::CategoriesController < Admin::BaseController
   end
 
   def destroy
-    if @category.destroy
-      flash[:success] = "#{@category} Deleted"
+    if@category.destroy
+      flash[:success] = "#{@category.name} Deleted"
       redirect_to categories_path
     else
-      flash[:success] = "#{@category} Can Not Be Deleted Because It is associated with at least one Idea"
+      flash[:success] = "#{@category.name} Can Not Be Deleted Because It is associated with at least one Idea"
     end
   end
 

@@ -1,0 +1,62 @@
+
+.first-box {
+  background-color: beige;
+  height: 30px;
+  padding: 15px;
+  margin: 10px;
+  border: 3px solid black;
+  border-radius: 30px;
+}
+
+.first-box a {
+  font-family: monospace;
+  font-size: 20px;
+  padding-right: 50px;
+  text-decoration: none;
+  padding: 10px;
+
+}
+
+a {
+  padding-left: 20px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.second-box a {
+  color: blanchedalmond;
+}
+
+.first-box a {
+  font-family: monospace;
+  font-size: 20px;
+  float: right;
+  padding-right: 50px;
+
+}
+
+center h1 {
+  font-family: cursive;
+}
+
+
+.first-box1 {
+  background-color: beige;
+  height: 30px;
+  width: 50%;
+  padding: 15px;
+  margin: 10px;
+  border: 3px solid black;
+  border-radius: 30px;
+}
+.first-box1 a {
+  color: magenta;
+  font-family: monospace;
+  font-size: 20px;
+  float: right;
+}
+
+.second-box {
+  background: #607D8B;
+  border-radius: 30px;
+}
