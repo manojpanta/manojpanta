@@ -1,6 +1,13 @@
-<div style="height:500px;width:100%;background:url('<%=@image.url%>');background-size:cover;">
+<link rel="stylesheet" href="/images/show.css" title="CSS" type="text/css"/>
+<div class='first-box'>
+  <%= link_to 'Log Out', logout_path %>
+  <%= link_to 'Categories', categories_path %>
+  <%= link_to 'Images', images_path %>
+  <%=link_to 'Home', user_path(current_user) %>
 </div>
-<%=@image.title %>
+
+<center><div class='images' ><img src="<%=@image.url%>"></div>
+<center><h1><%=@image.title %></center></h1>
 <%if current_admin?%>
-<%= link_to 'Delete Image', admin_image_path(@image), method: :delete %>
+<center><h1><%= link_to 'Delete Image', admin_image_path(@image), method: :delete %></center><h1>
 <%end%>

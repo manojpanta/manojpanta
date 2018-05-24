@@ -2,6 +2,9 @@ require 'rails_helper'
 
 describe 'when user visits home  page' do
   scenario 'a user can create new idea by filling out a form' do
+    admin = User.create(username: 'manoj11', password: 'password', role: 1)
+
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(admin)
     Category.create!(name: 'Information')
     Category.create!(name: 'Information1')
     Category.create!(name: 'Information2')

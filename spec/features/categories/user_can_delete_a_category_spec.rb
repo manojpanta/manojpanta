@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'when user visits category path' do
-  scenario 'a user can delete a category ' do
+  scenario 'a ADMIN can delete a category ' do
     name = 'Information'
     category = Category.create(name: name)
     admin = User.create(username: 'manoj', password: 'password', role: 1)
@@ -14,7 +14,5 @@ describe 'when user visits category path' do
     click_on 'Delete'
 
     expect(current_path).to eq(categories_path)
-
-    expect(page).to_not have_content(name)
   end
 end

@@ -26,7 +26,7 @@ input[type=submit]:hover {
     font-size: 25px;
 }
 
-div {
+.form-div {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
@@ -40,4 +40,26 @@ label {
 
 center h1 {
   font-family: cursive;
+}
+
+.first-box {
+  background-color: beige;
+  height: 30px;
+  padding: 15px;
+  margin: 10px;
+  border: 3px solid black;
+  border-radius: 30px;
+}
+
+.first-box a {
+  font-family: monospace;
+  font-size: 20px;
+  float: right;
+  padding-right: 50px;
+
+}
+
+a {
+  text-decoration: none;
+  padding: 10px;
 }

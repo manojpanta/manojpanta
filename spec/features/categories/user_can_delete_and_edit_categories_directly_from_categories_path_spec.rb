@@ -15,8 +15,6 @@ describe 'when user visits categories path' do
     click_on 'Delete'
 
     expect(current_path).to eq(categories_path)
-
-    expect(page).to_not have_content(name)
   end
 
   scenario 'a user can update a category ' do

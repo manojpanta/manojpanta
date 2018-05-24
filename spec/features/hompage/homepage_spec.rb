@@ -15,7 +15,7 @@ describe 'when user visits hompage' do
     click_on 'Create User'
 
     expect(current_path).to eq(user_path(User.last))
-    expect(page).to have_content("Welcome #{username}")
+    expect(page).to have_content("WELCOME #{username.upcase}")
   end
 
   scenario 'a user can not  sign up with already taken user name' do

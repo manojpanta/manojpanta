@@ -9,7 +9,7 @@ describe 'admin visits categories index page' do
 
     visit categories_path
 
-    expect(page).to have_content('Admin Categories')
+    expect(page).to have_content('ADMIN CATEGORIES')
     expect(page).to have_link('Edit')
     expect(page).to have_link('Delete')
   end

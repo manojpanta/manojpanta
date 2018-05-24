@@ -1,3 +1,9 @@
 <link rel="stylesheet" href="/categories/form.css" title="CSS" type="text/css"/>
+<div class='first-box'>
+  <%= link_to 'Log Out', logout_path %>
+  <%= link_to 'Categories', categories_path %>
+  <%= link_to 'Images', images_path %>
+  <%=link_to 'Home', user_path(current_user) %>
+</div>
 <center><h1> Edit Category Here!</h1></center>
 <%= render partial: "form" %>

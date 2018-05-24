@@ -26,7 +26,7 @@ img {
   width: 50%;
 }
 
-a {
+.second-box a {
   background: rgba(255, 0, 0, 0.4);
   text-decoration: none;
   font-size: 20px;
@@ -37,11 +37,33 @@ a {
 
 }
 
-a:hover {
+.second-box a:hover {
   background-color: #45a049;
   font-size: 25px;
 }
 
 .idea-box {
 background: blanchedalmond;
+}
+
+.first-box {
+  background-color: beige;
+  height: 30px;
+  padding: 15px;
+  margin: 10px;
+  border: 3px solid black;
+  border-radius: 30px;
+}
+
+.first-box a {
+  font-family: monospace;
+  font-size: 20px;
+  float: right;
+  padding-right: 50px;
+
+}
+
+a {
+  text-decoration: none;
+  padding: 10px;
 }

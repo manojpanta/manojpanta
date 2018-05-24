@@ -1,25 +1,17 @@
 <link rel="stylesheet" href="/images/index.css" title="CSS" type="text/css"/>
 
 
-<%if current_admin?%>
 <div class='first-box'>
   <%= link_to 'Log Out', logout_path %>
   <%= link_to 'Categories', categories_path %>
   <%= link_to 'Images', images_path %>
   <%=link_to 'Home', user_path(current_user) %>
-</div>
-<%else%>
-  <div class='first-box'>
-  <%= link_to 'Log Out', logout_path %>
-  <%= link_to 'Categories', categories_path %>
-  <%= link_to 'Images', images_path %>
-  <%= link_to 'Create New Idea', new_user_idea_path(current_user) %>
-  <%=link_to 'Home', user_path(current_user) %>
-  </div>
-<%end%>
-<div class='second-box'>
   <%if current_admin?%>
   <%= link_to 'Create New Image', new_admin_image_path %>
+  <%end%>
+</div>
+<div class='second-box'>
+  <%if current_admin?%>
   <center><h1> ADMIN IMAGES </h1></center>
   <%else%>
   <center><h1>IMAGES </h1></center>

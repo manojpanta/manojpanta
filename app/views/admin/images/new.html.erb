@@ -1,3 +1,12 @@
+<link rel="stylesheet" href="/images/new.css" title="CSS" type="text/css"/>
+<div class='first-box'>
+  <%= link_to 'Log Out', logout_path %>
+  <%= link_to 'Categories', categories_path %>
+  <%= link_to 'Images', images_path %>
+  <%=link_to 'Home', user_path(current_user) %>
+</div>
+<div>
+<center><h1> Create New Image Here!</h1></center>
 <%= form_for [:admin, @image] do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>
@@ -5,3 +14,4 @@
   <%= f.text_field :url %>
   <%= f.submit %>
 <% end %>
+</div>

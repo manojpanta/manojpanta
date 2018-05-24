@@ -9,7 +9,7 @@ describe 'user can create idea' do
 
     visit user_path(admin)
 
-    expect(page).to have_content("Welcome #{admin.username}")
+    expect(page).to have_content("WELCOME #{admin.username.upcase}")
     expect(page).to have_link("Categories")
     expect(page).to have_link("Images")
 

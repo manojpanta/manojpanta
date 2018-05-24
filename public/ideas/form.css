@@ -41,3 +41,7 @@ label {
 select {
   font-size: 14px;
 }
+
+input {
+  font-size: 20px;
+}
