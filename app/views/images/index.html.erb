@@ -25,6 +25,7 @@
   <center><h1>IMAGES </h1></center>
   <%end%>
 
+  <hr>
   <% @images.each do |i| %>
     <center><div class='images' ><img src="<%=i.url%>"></div>
 
@@ -34,14 +35,15 @@
           <%=link_to 'Delete', admin_image_path(i), method: :delete %>
         <%end%>
     </div></center>
-
     <%if @idea%>
-      <div class="favorite">
-        <%= form_tag user_idea_path(current_user, @idea), method: 'patch' do %>
-          <%= hidden_field_tag :image_id, i.id  %>
-          <%= submit_tag "Add Image To My Idea" %>
-        <%end%>
-      </div>
+    <center><div class="favorite">
+      <%= form_tag user_idea_path(current_user, @idea), method: 'patch' do %>
+      <%= hidden_field_tag :image_id, i.id  %>
+      <%= submit_tag "Add Image To My Idea" %>
+      <%end%>
+    </div></center>
     <%end%>
+    <hr>
+
   <%end%>
 </div>

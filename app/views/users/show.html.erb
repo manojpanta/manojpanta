@@ -7,15 +7,15 @@
   <%= link_to 'Create New Idea', new_user_idea_path(current_user) %>
   <%=link_to 'Home', user_path(current_user) %>
 </div>
-<p> WELCOME <%=current_user.username.upcase %> </p>
-
-
-<p> Your Ideas </p>
-<%@ideas.each do |i| %>
-  <center><div>
-    <%= link_to i.title, user_idea_path(@user,i)%>
-    <%= link_to 'Edit', edit_user_idea_path(@user,i)%>
-    <%= link_to 'Delete', user_idea_path(@user,i), method: :delete%>
-  <div></center>
-
-<%end%>
+<div class='second-box'>
+  <p> WELCOME <%=current_user.username.upcase %> </p>
+  <p> Your Ideas </p>
+  <hr>
+  <%@ideas.each do |i| %>
+    <center><div>
+      <%= link_to i.title, user_idea_path(@user,i)%>
+      <%= link_to 'Edit', edit_user_idea_path(@user,i)%>
+      <%= link_to 'Delete', user_idea_path(@user,i), method: :delete%>
+    </div></center>
+  <%end%>
+</div>
