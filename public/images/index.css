@@ -17,6 +17,7 @@
   border-radius: 30px;
 }
 .first-box1 a {
+  color: magenta;
   font-family: monospace;
   font-size: 20px;
   padding-right: 50px;
@@ -25,6 +26,7 @@
 
 a {
   text-decoration: none;
+  font-size: 20px;
   padding: 10px;
 }
 
@@ -35,6 +37,7 @@ a {
   padding-right: 50px;
 
 }
+
 
 img {
   padding: 10px;
@@ -51,4 +54,8 @@ img {
 .second-box {
   background: #607D8B;
   border-radius: 30px;
+}
+
+center h1 {
+  font-family: cursive;
 }
