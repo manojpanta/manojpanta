@@ -15,12 +15,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
-    if @user == current_user
-      @ideas = @user.ideas
-    else
-      render :file => 'public/404.html'
-    end
   end
 
   private

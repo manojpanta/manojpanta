@@ -13,3 +13,32 @@
  *= require_tree .
  *= require_self
  */
+ .first-box {
+   background-color: beige;
+   height: 30px;
+   padding: 15px;
+   margin: 10px;
+   margin-bottom: 0px;
+   border: 3px solid black;
+   border-radius: 30px;
+ }
+
+ .first-box a {
+   font-size: 20px;
+   float: right;
+   padding-right: 50px;
+ }
+
+ a:hover {
+   color: cadetblue;
+ }
+ a:active {
+   color: green;
+ }
+ a:focus {
+   color: green;
+ }
+
+ body {
+   background-image: url('https://www.akuaroworld.com/wp-content/uploads/2016/11/programming.jpg');
+ }

@@ -1,21 +1,49 @@
 <link rel="stylesheet" href="/users/show.css" title="CSS" type="text/css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<div class='first-box'>
-  <%= link_to 'Log Out', logout_path %>
-  <%= link_to 'Categories', categories_path %>
-  <%= link_to 'Images', images_path %>
-  <%= link_to 'Create New Idea', new_user_idea_path(current_user) %>
-</div>
 <div class='second-box'>
-  <p> WELCOME <%=current_user.username.upcase %> </p>
-  <p> Your Ideas </p>
+  <p>I am Manoj Panta.</p>
+  <h3> Software Developer / Technology Enthusiast</h3>
   <hr>
-  <%@ideas.each do |i| %>
-    <center><div class='idea-box123'>
-      <%= link_to i.title, user_idea_path(@user,i)%>
-      <%= link_to 'Edit', edit_user_idea_path(@user,i)%>
-      <%= link_to 'Delete', user_idea_path(@user,i), method: :delete%>
-    </div></center>
-  <%end%>
-  <hr>
+</div>
+
+<div class='third-box'>
+  <button class='facebook'style="font-size:24px" onclick="window.open('https://www.facebook.com/manoj.panta.12')" value="Open Window" type="button"><i class="fa fa-facebook-square"></i>
+     Facebook</button>
+  <button class= 'github'style="font-size:24px" onclick="window.open('https://github.com/manojpanta')" value="Open Window" type="button"><i class="fa fa-github-alt"></i>
+     Github</button>
+  <button class= 'linkedin'style="font-size:24px" onclick="window.open('https://www.linkedin.com/in/manojpanta/')" value="Open Window" type="button"><i class="fa fa-linkedin-square"></i>
+     LinkedIn</button>
+</div>
+
+<div class='flex-container1'>
+  <p> Skills</p>
+  <div class='flex-container'>
+      <div class='individual-div' >
+        <h2> Languages and Platforms</h2>
+          <h4 > Ruby</h4>
+          <h4> Swift</h4>
+          <h4> HTML</h4>
+          <h4> CSS</h4>
+          <h4> SQL</h4>
+      </div>
+      <div class='individual-div' >
+        <h2> Framework and Tools</h2>
+        <h4> Ruby On Rails</h4>
+        <h4> Sinatra</h4>
+        <h4> Xcode</h4>
+        <h4> Atom / VSCode</h4>
+        <h4> Git</h4>
+      </div>
+      <div class='individual-div' >
+        <h2> Others</h2>
+        <h4> Ruby On Rails</h4>
+        <h4> Sinatra</h4>
+        <h4> Xcode</h4>
+        <h4> Atom / VSCode</h4>
+        <h4> Git</h4>
+      </div>
+    <hr>
+  </div>
 </div>

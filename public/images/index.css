@@ -25,13 +25,16 @@
 }
 
 a {
+  font-family: fantasy;
   text-decoration: none;
-  font-size: 20px;
   padding: 10px;
+  color: brown;
+}
+a:hover {
+  color: cadetblue;
 }
 
 .first-box a {
-  font-family: monospace;
   font-size: 20px;
   float: right;
   padding-right: 50px;
@@ -71,4 +74,19 @@ hr {
     height: 12px;
     border: 0;
     box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}
+
+.facebook {
+  border-radius: 20px;
+  border: 1px solid brown;
+
+}
+button.facebook:hover  {
+  cursor: pointer;
+  background-color: #607D8B;
+  border-radius: 20px;
+
+}
+.facebook aa {
+
 }

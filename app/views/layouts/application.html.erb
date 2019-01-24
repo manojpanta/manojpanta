@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ideabox</title>
+    <title>Manoj Panta | Back End Developer</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <%= javascript_include_tag 'application' %>
   </head>
 
@@ -13,6 +16,15 @@
     <% flash.each do |name, msg| %>
       <%= content_tag :div, msg, class: name %>
     <% end %>
+    <div class='first-box'>
+      <%= link_to 'Resume', resume_index_path %>
+      <%= link_to 'Projects', projects_path %>
+      <%= link_to 'Contact', root_path %>
+      <%= link_to 'Contact', root_path %>
+      <%= link_to 'My Story', mystory_index_path %>
+      <%= link_to 'Manoj Panta', root_path, :class => "name"%>
+    </div>
+
     <%= yield %>
   </body>
 </html>

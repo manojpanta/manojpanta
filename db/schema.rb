@@ -10,10 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_22_235800) do
+ActiveRecord::Schema.define(version: 2018_12_06_074441) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cards", force: :cascade do |t|
+    t.string "image"
+  end
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -35,6 +39,10 @@ ActiveRecord::Schema.define(version: 2018_05_22_235800) do
     t.datetime "updated_at", null: false
     t.bigint "category_id"
     t.bigint "user_id"
+    t.string "img_file_name"
+    t.string "img_content_type"
+    t.integer "img_file_size"
+    t.datetime "img_updated_at"
     t.index ["category_id"], name: "index_ideas_on_category_id"
     t.index ["user_id"], name: "index_ideas_on_user_id"
   end
