@@ -101,7 +101,7 @@ Rails.application.configure do
     :user_name => ENV["USER_NAME"],
     :password => ENV["PASSWORD"],
     :authentication => "plain"
-    :openssl_verify_mode => :none,
+    :openssl_verify_mode => none,
     :enable_starttls_auto => false
   }
   config.action_mailer.default_url_options = {
