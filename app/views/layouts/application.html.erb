@@ -14,13 +14,14 @@
 
   <body>
     <% flash.each do |name, msg| %>
-      <%= content_tag :div, msg, class: name %>
-    <% end %>
+     <%= content_tag :div, msg, class: name %>
+   <% end %>
+
     <div class='first-box'>
-      <%= link_to 'Resume', resume_index_path %>
-      <%= link_to 'Projects', projects_path %>
-      <%= link_to 'Contact', root_path %>
-      <%= link_to 'My Story', mystory_index_path %>
+      <%= link_to 'Resume', resume_index_path, :class => "other_tabs" %>
+      <%= link_to 'Projects', projects_path, :class => "other_tabs"%>
+      <%= link_to 'Contact', contact_index_path, :class => "other_tabs" %>
+      <%= link_to 'My Story', mystory_index_path, :class => "other_tabs" %>
       <%= link_to 'Manoj Panta', root_path, :class => "name"%>
     </div>
 

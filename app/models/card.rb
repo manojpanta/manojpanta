@@ -1,6 +1,0 @@
-class Card < ApplicationRecord
-
-
-
-
-end

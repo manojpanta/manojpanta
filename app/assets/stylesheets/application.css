@@ -22,8 +22,13 @@
    border: 3px solid black;
    border-radius: 30px;
  }
+ .name {
+   float: left;
+   font-size: 20px;
+   padding-left: 50px;
+ }
 
- .first-box a {
+ .first-box .other_tabs {
    font-size: 20px;
    float: right;
    padding-right: 50px;

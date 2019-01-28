@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
 
 
-  root to: "users#show"
+  root to: "landingpage#show"
+
 
 
   resources :resume, only: [:index]
+  resources :users, only: [:create]
+
+  resources :contact, only: [:index]
   resources :mystory, only: [:index]
   resources :projects, only: [:index, :show]
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

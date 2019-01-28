@@ -1,0 +1,34 @@
+
+<link rel="stylesheet" href="/mystory/show.css" title="CSS" type="text/css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+</style>
+</head>
+<body>
+
+
+<div class="container">
+  <%= form_for @user do |f| %>
+  <%=f.label :Name %>
+  <%=f.text_field :name %>
+
+  <%=f.label :Email %>
+  <%=f.text_field :email%>
+
+  <%=f.label :Message %>
+  <%=f.text_area :message%>
+
+  <%=f.submit :"Send Message"%>
+  <%end%>
+</div>
+
+</body>
+</html>
