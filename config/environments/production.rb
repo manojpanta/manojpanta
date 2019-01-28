@@ -100,8 +100,8 @@ Rails.application.configure do
     :domain => "https://manojpanta.herokuapp.com/",
     :user_name => ENV["USER_NAME"],
     :password => ENV["PASSWORD"],
-    :authentication => "plain"
-    :openssl_verify_mode => none,
+    :authentication => "plain",
+    :openssl_verify_mode => :none,
     :enable_starttls_auto => false
   }
   config.action_mailer.default_url_options = {
