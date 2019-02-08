@@ -102,7 +102,7 @@ Rails.application.configure do
     :password => "MAnoj123",
     :authentication => "plain",
     :openssl_verify_mode => :none,
-    :enable_starttls_auto => false
+    :enable_starttls_auto => false,
     :SMTP_DOMAIN => "https://manojpanta.herokuapp.com/"
   }
   config.action_mailer.default_url_options = {
