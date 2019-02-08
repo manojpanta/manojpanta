@@ -18,13 +18,36 @@
    <% end %>
 
     <div class='first-box'>
+      <%= link_to 'Contact', contact_index_path, :class => "other_tabs" %>
       <%= link_to 'Resume', resume_index_path, :class => "other_tabs" %>
       <%= link_to 'Projects', projects_path, :class => "other_tabs"%>
-      <%= link_to 'Contact', contact_index_path, :class => "other_tabs" %>
-      <%= link_to 'My Story', mystory_index_path, :class => "other_tabs" %>
       <%= link_to 'Manoj Panta', root_path, :class => "name"%>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      Magic LINK<%=link_to 'My Story', mystory_index_path, :class => "other_tabs" %>
     </div>
 
     <%= yield %>
+      <div class='footer'>
+        <%= link_to 'Contact', contact_index_path%>
+        <%= link_to 'Projects', projects_path%>
+        <%= link_to 'Manoj Panta', root_path%>
+        <button style="font-size:24px" onclick="window.open('https://www.linkedin.com/in/manojpanta/')" value="Open Window" type="button"><i class="fa fa-linkedin-square"></i>
+        </button>
+        <button style="font-size:24px" onclick="window.open('https://github.com/manojpanta')" value="Open Window" type="button"><i class="fa fa-github-alt"></i>
+        </button>
+        <button style="font-size:24px" onclick="window.open('https://twitter.com/Ace_Monoz')" value="Open Window" type="button"><i class="fa fa-twitter"></i>
+        </button>
+        <button style="font-size:24px" onclick="window.open('https://www.facebook.com/manoj.panta.12')" value="Open Window" type="button"><i class="fa fa-facebook-square"></i>
+        </button>
+      </div>
   </body>
 </html>
