@@ -82,6 +82,8 @@ hr {
   flex-direction:  row;
   padding-left: 30px;
   padding-bottom: 30px;
+  overflow: scroll;
+
 }
 
 .individual-div {
@@ -235,4 +237,5 @@ p.summary {
   padding: 100px;
   border-radius: 30px;
   border: 3px solid black;
+  overflow: scroll;
 }
