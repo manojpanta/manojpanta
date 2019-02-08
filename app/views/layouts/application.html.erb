@@ -15,9 +15,18 @@
   <body>
     <% flash.each do |name, msg| %>
      <%= content_tag :div, msg, class: name %>
-   <% end %>
+    <% end %>
 
-    <div class='first-box'>
+    <div id="navbar">
+      <a href="/" id="logo">Manoj Panta</a>
+      <div id="navbar-right">
+        <a href="/projects">Projects</a>
+        <a href="/resume">Resume</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </div>
+
+    <!-- <div class='first-box'>
       <%= link_to 'Contact', contact_index_path, :class => "other_tabs" %>
       <%= link_to 'Resume', resume_index_path, :class => "other_tabs" %>
       <%= link_to 'Projects', projects_path, :class => "other_tabs"%>
@@ -33,7 +42,7 @@
       <br>
       <br>
       Magic LINK<%=link_to 'My Story', mystory_index_path, :class => "other_tabs" %>
-    </div>
+    </div> -->
 
     <%= yield %>
       <div class='footer'>
@@ -50,4 +59,18 @@
         </button>
       </div>
   </body>
+  <script>
+// When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("navbar").style.padding = "10px 10px";
+    document.getElementById("logo").style.fontSize = "20px";
+  } else {
+    document.getElementById("navbar").style.padding = "20px 10px";
+    document.getElementById("logo").style.fontSize = "25px";
+  }
+}
+</script>
 </html>
