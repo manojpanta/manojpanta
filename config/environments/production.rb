@@ -104,7 +104,7 @@ Rails.application.configure do
     :authentication => "plain",
     :openssl_verify_mode => :none,
     :enable_starttls_auto => true,
-    :domain => "https://manojpanta.herokuapp.com/"
+    :domain => "gmail.com"
 
   }
   config.action_mailer.default_url_options = {
