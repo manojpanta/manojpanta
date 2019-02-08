@@ -49,13 +49,13 @@
         <%= link_to 'Contact', contact_index_path%>
         <%= link_to 'Projects', projects_path%>
         <%= link_to 'Manoj Panta', root_path%>
-        <button style="font-size:24px" onclick="window.open('https://www.linkedin.com/in/manojpanta/')" value="Open Window" type="button"><i class="fa fa-linkedin-square"></i>
+        <button class='linkedin-footer'style="font-size:24px" onclick="window.open('https://www.linkedin.com/in/manojpanta/')" value="Open Window" type="button"><i class="fa fa-linkedin-square"></i>
         </button>
-        <button style="font-size:24px" onclick="window.open('https://github.com/manojpanta')" value="Open Window" type="button"><i class="fa fa-github-alt"></i>
+        <button class='github-footer' style="font-size:24px" onclick="window.open('https://github.com/manojpanta')" value="Open Window" type="button"><i class="fa fa-github-alt"></i>
         </button>
-        <button style="font-size:24px" onclick="window.open('https://twitter.com/Ace_Monoz')" value="Open Window" type="button"><i class="fa fa-twitter"></i>
+        <button class='tweeter-footer' style="font-size:24px" onclick="window.open('https://twitter.com/Ace_Monoz')" value="Open Window" type="button"><i class="fa fa-twitter"></i>
         </button>
-        <button style="font-size:24px" onclick="window.open('https://www.facebook.com/manoj.panta.12')" value="Open Window" type="button"><i class="fa fa-facebook-square"></i>
+        <button class='facebook-footer'style="font-size:24px" onclick="window.open('https://www.facebook.com/manoj.panta.12')" value="Open Window" type="button"><i class="fa fa-facebook-square"></i>
         </button>
       </div>
   </body>
@@ -65,10 +65,10 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    document.getElementById("navbar").style.padding = "10px 10px";
+    document.getElementById("navbar").style.padding = "7px 10px";
     document.getElementById("logo").style.fontSize = "20px";
   } else {
-    document.getElementById("navbar").style.padding = "20px 10px";
+    document.getElementById("navbar").style.padding = "14px 10px";
     document.getElementById("logo").style.fontSize = "25px";
   }
 }

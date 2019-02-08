@@ -81,6 +81,7 @@ Rails.application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
+
   # Use a different logger for distributed setups.
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
@@ -93,17 +94,18 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-  config.action_mailer.delivery_method =  :smtp
+  config.action_mailer.delivery_method =  :sendmail
+  config.action_mailer.perform_deliveries = true
   config.action_mailer.smtp_settings = {
     :address => "smtp.gmail.com",
     :port => 587,
-    :domain => "https://manojpanta.herokuapp.com/",
-    :user_name => "guccilove0304@gmail.com",
-    :password => "MAnoj123",
+    :user_name => ENV['USER_NAME'],
+    :password => ENV['PASSWORD'],
     :authentication => "plain",
     :openssl_verify_mode => :none,
-    :enable_starttls_auto => false,
-    :SMTP_DOMAIN => "https://manojpanta.herokuapp.com/"
+    :enable_starttls_auto => true,
+    :domain => "https://manojpanta.herokuapp.com/"
+
   }
   config.action_mailer.default_url_options = {
   :host => "https://manojpanta.herokuapp.com/"

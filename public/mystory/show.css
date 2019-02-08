@@ -47,7 +47,7 @@ center a {
   text-align: center;
   padding-bottom: 7px;
   border: 3px solid black;
-  margin-top: 140px;
+  margin-top: 125px;
 }
 
 hr {
@@ -92,6 +92,7 @@ hr {
   margin-right:  30px;
   overflow: scroll;
   display: table;
+  padding: 20px;
 
 }
 
@@ -117,20 +118,24 @@ button {
 .facebook:hover {
   color: white;
   background-color: #3b5998;
+  transition: 1s;
 }
 
 .github:hover {
   color: white;
   background-color: #24292e;
+  transition: 1s;
 }
 
 .linkedin:hover {
   color: white;
   background-color: #0077B5;
+  transition: 1s;
 }
 .tweeter:hover {
   color: white;
   background-color: #1da1f2;
+  transition: 1s;
 }
 
 .my-story {
@@ -189,7 +194,7 @@ input[type=submit]:hover {
   background-color: #f2f2f2;
     padding: 20px;
     border-radius: 30px;
-    margin-top: 150px;
+    margin-top: 125px;
     border: 3px solid black;
 }
 
@@ -212,7 +217,7 @@ label {
 iframe {
   width: 850px;
   height: 1100px;
-  margin-top: 100px;
+  margin-top: 80px;
 }
 p.summary {
   margin: 20px;
