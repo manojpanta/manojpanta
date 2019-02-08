@@ -68,6 +68,6 @@ Rails.application.configure do
     :authentication => "plain"
   }
   config.action_mailer.default_url_options = {
-  :host => "localhost:3000"
+  :host => "https://manojpanta.herokuapp.com/"
   }
 end
