@@ -96,8 +96,8 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   config.action_mailer.delivery_method =  :sendmail
   config.action_mailer.perform_deliveries = true
-  config.action_mailer.smtp_settings = {
-    :address => "smtp.gmail.com",
+  config.action_mailer.sendmail_settings = {
+    :address => "sendmail.gmail.com",
     :port => 587,
     :user_name => ENV['USER_NAME'],
     :password => ENV['PASSWORD'],
