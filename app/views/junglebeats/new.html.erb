@@ -1,0 +1,9 @@
+<link rel="stylesheet" href="/mystory/show.css" title="CSS" type="text/css"/>
+<div class="container">
+  <%= form_tag jungle_beat_path do %>
+    <h2 class='linkedlist-description'>This Program Runs based on linked list.. When we enter characters to this form, It creates a Linked List; which has head value of Nil. Then, It appends every character into linked list making our last character the last node of the Linked List. Then It plays every node from the beginning.<br><br>
+    <%=label_tag :"Enter Beats You Want To Play!!"%>
+    <%=text_field_tag :beats%>
+    <%=submit_tag "Enter" %>
+  <%end%>
+</div>
