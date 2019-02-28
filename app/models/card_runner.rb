@@ -1,4 +1,3 @@
-require './app/models/card.rb'
 class CardRunner < ApplicationRecord
   def self.start(answer)
     if %[q quit].split.include?(answer)
