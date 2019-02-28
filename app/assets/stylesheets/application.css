@@ -94,6 +94,11 @@
     border: none;
     outline: none;
   }
+  .result-check {
+    font-size: 20px;
+    font-family: sans-serif;
+    text-align: left;
+  }
 
 
   #navbar {
