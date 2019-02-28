@@ -186,6 +186,8 @@ input[type=submit] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-size: 16px;
+
 }
 
 input[type=submit]:hover {

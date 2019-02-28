@@ -52,7 +52,6 @@ img {
 .second-box {
   background: #607D8B;
   padding: 10px;
-  background-color: burlywood;
   border-radius: 30px;
   border: 3px solid black;
   margin-top: 125px;
@@ -76,7 +75,7 @@ hr {
 }
 
 .facebook {
-  border-radius: 20px;
+  border-radius:20px 0px 20px 0px;
   padding-left: 50px;
   float: left;
   padding-right: 50px;
