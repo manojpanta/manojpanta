@@ -1,0 +1,8 @@
+<link rel="stylesheet" href="/mystory/show.css" title="CSS" type="text/css"/>
+<div class="container">
+  <%= form_tag new_game_path do %>
+    <%=label_tag :"Enter_Credit_Card_Number_To_Check_It's_Validity"%>
+    <%=text_field_tag :Credit_Card_Number%>
+    <%=submit_tag "Enter" %>
+  <%end%>
+</div>
