@@ -22,12 +22,17 @@ class JungleBeat
   end
 
   def play
-    current = list.head
-    beats = "#{current.data}"
-    until current.next_node.nil?
-      current = current.next_node
-      beats << current.data
+    if list.head != nil
+      current = list.head
+      beats = "#{current.data}"
+      until current.next_node.nil?
+        current = current.next_node
+        beats << current.data
+      end
+      `say -r 100 #{beats}`
+    else
+      
     end
-    `say -r 100 #{beats}`
+
   end
 end
