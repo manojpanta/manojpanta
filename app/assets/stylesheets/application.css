@@ -175,6 +175,7 @@
   border-radius: 30px;
   margin-top: 125px;
   border: 3px solid black;
+  overflow: scroll;
 }
 
 .link-to-new a {
