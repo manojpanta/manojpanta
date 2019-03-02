@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="/mystory/show.css" title="CSS" type="text/css"/>
+<div class="container-braille">
+  <%if @translated%>
+    <div>
+      <%@translated.each do |t|%>
+      <article class = 'this-is-braille'><%=t%><br>
+      <%end%>
+    </div>
+    <h4 class ='link-to-new'><%=link_to 'Try New One', night_writer_path%>
+
+  <%else%>
+    <div>
+     <article class = 'this-is-braille'><%=@translated1%>
+    </div>
+    <h4 class ='link-to-new'><%=link_to 'Try New One', night_writer_path%>
+  <%end%>
+</div>
