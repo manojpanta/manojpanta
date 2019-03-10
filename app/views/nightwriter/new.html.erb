@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="/mystory/show.css" title="CSS" type="text/css"/>
 <div class="container">
   <%= form_tag night_writer_path do %>
-    <h2 class='linkedlist-description'>This program translates English to Braille and Vice versa. Please limit your entry within: A-Z, a-z, 0-9, space, dot/period, comma, question mark, exclamation mark, dash, and new lines <br><br>
+    <h2 class='linkedlist-description'>This program translates English to Braille and Vice versa. 0 represents raised dots.Please limit your entry within: A-Z, a-z, 0-9, space, dot/period, comma, question mark, exclamation mark, dash, and new lines <br><br>
     <%=label_tag :"Enter English Here to Traslate to Braille"%>
     <%=text_area_tag :answer%>
     <%=submit_tag "Enter" %>
