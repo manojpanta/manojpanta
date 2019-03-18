@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   post '/night_writer', to: 'nightwriter#create'
   post '/night_reader', to: 'nightwriter#read'
 
+  get '/magic_game', to: 'magic_game#new'
   resources :contact, only: [:index]
   resources :mystory, only: [:index]
   resources :projects, only: [:index, :show]
