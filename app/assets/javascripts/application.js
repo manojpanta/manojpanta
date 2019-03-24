@@ -225,7 +225,7 @@ function tellAnswer(position) {
   card1.style.border= '3px solid';
   card1.style.borderRadius= '15px';
   card1.src = "/images/JPEG/" + position;
-  document.querySelector('#question').innerHTML = "Yayyyyy!!! This is your card";
+  document.querySelector('#question').innerHTML = "Magic Time!!!!This is your card";
   click_counter = 1
 }
 
