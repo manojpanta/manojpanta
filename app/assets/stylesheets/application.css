@@ -178,6 +178,8 @@
   margin-top: 125px;
   border: 3px solid black;
   overflow: scroll;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .link-to-new a {
@@ -191,4 +193,34 @@
   font-size: 20px;
   font-family: initial;
   text-decoration: underline;
+}
+
+.card-magic {
+  display: flex;
+  justify-content: center;
+}
+
+
+#card-22 {
+  display: none;
+}
+.btn-roll {
+  display: none;
+}
+#question {
+  text-decoration: none;
+  font-stretch: unset;
+  font-family: monospace;
+  font-size: x-large;
+  margin-bottom: 0px;
+}
+#reveal-card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 200px;
+}
+#start-game-button {
+  width: 200px;
+  align-self: center;
 }

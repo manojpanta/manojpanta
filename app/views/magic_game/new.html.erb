@@ -1,38 +1,43 @@
 <link rel="stylesheet" href="/mystory/show.css" title="CSS" type="text/css"/>
 <link type="text/css" rel="stylesheet" href="style.css">
 <div class='magic-box'>
-  <div class='first-row' id='box-1'>
-    <img src="/images/JPEG/2C.jpg" alt="Dice" class="dice" id="dice-1"></img>
-    <img src="/images/JPEG/2C.jpg" alt="Dice" class="dice" id="dice-2"></img>
-    <img src="/images/JPEG/2C.jpg" alt="Dice" class="dice" id="dice-3"></img>
-    <img src="/images/JPEG/2C.jpg" alt="Dice" class="dice" id="dice-4"></img>
-    <img src="/images/JPEG/2C.jpg" alt="Dice" class="dice" id="dice-5"></img>
-    <img src="/images/JPEG/2C.jpg" alt="Dice" class="dice" id="dice-6"></img>
-    <img src="/images/JPEG/2C.jpg" alt="Dice" class="dice" id="dice-7"></img>
+  <h3 id = 'question'> Please Click   `Start Game`   TO Start </h3>
+  <div class='first-row card-magic' id='box-1'>
+    <img  src="/images/JPEG/AS.jpg" alt="Dice" class="card" id="card-1"></img>
+    <img src="/images/JPEG/KS.jpg" alt="Dice" class="card" id="card-2"></img>
+    <img src="/images/JPEG/QS.jpg" alt="Dice" class="card" id="card-3"></img>
+    <img src="/images/JPEG/JS.jpg" alt="Dice" class="card" id="card-4"></img>
+    <img src="/images/JPEG/AS.jpg" alt="Dice" class="card" id="card-5"></img>
+    <img src="/images/JPEG/AS.jpg" alt="Dice" class="card" id="card-6"></img>
+    <img src="/images/JPEG/AS.jpg" alt="Dice" class="card" id="card-7"></img>
+    <button onclick="rowSelector1()" class="btn-roll" id = 'button1'><i class="ion-ios-download-outline"></i>First</button>
   </div>
 
-  <div class='second-row'>
-    <img src="/images/JPEG/2C.jpg" alt="Dice" class="dice" id="dice-8"></img>
-    <img src="/images/JPEG/2C.jpg" alt="Dice" class="dice" id="dice-9"></img>
-    <img src="/images/JPEG/2C.jpg" alt="Dice" class="dice" id="dice-10"></img>
-    <img src="/images/JPEG/2C.jpg" alt="Dice" class="dice" id="dice-11"></img>
-    <img src="/images/JPEG/2C.jpg" alt="Dice" class="dice" id="dice-12"></img>
-    <img src="/images/JPEG/2C.jpg" alt="Dice" class="dice" id="dice-13"></img>
-    <img src="/images/JPEG/2C.jpg" alt="Dice" class="dice" id="dice-14"></img>
+  <div class='second-row card-magic' id = 'second-row-div'>
+    <img src="/images/JPEG/AS.jpg" alt="Dice" class="card" id="card-8"></img>
+    <img src="/images/JPEG/AS.jpg" alt="Dice" class="card" id="card-9"></img>
+    <img src="/images/JPEG/KH.jpg" alt="Dice" class="card" id="card-10"></img>
+    <img src="/images/JPEG/QH.jpg" alt="Dice" class="card" id="card-11"></img>
+    <img src="/images/JPEG/JH.jpg" alt="Dice" class="card" id="card-12"></img>
+    <img src="/images/JPEG/AS.jpg" alt="Dice" class="card" id="card-13"></img>
+    <img src="/images/JPEG/AS.jpg" alt="Dice" class="card" id="card-14"></img>
+    <button onclick="rowSelector2()" class="btn-roll" id = 'button2'><i class="ion-ios-loop"></i>Second</button>
   </div>
 
-  <div class='third-row'>
-    <img src="/images/JPEG/2C.jpg" alt="Dice" class="dice" id="dice-15"></img>
-    <img src="/images/JPEG/2C.jpg" alt="Dice" class="dice" id="dice-16"></img>
-    <img src="/images/JPEG/3C.jpg" alt="Dice" class="dice" id="dice-17"></img>
-    <img src="/images/JPEG/2C.jpg" alt="Dice" class="dice" id="dice-18"></img>
-    <img src="/images/JPEG/4C.jpg" alt="Dice" class="dice" id="dice-19"></img>
-    <img src="/images/JPEG/2C.jpg" alt="Dice" class="dice" id="dice-20"></img>
-    <img src="/images/JPEG/2C.jpg" alt="Dice" class="dice" id="dice-21"></img>
+  <div class='third-row card-magic'>
+    <img src="/images/JPEG/AS.jpg" alt="Dice" class="card" id="card-15"></img>
+    <img src="/images/JPEG/AS.jpg" alt="Dice" class="card" id="card-16"></img>
+    <img src="/images/JPEG/AS.jpg" alt="Dice" class="card" id="card-17"></img>
+    <img src="/images/JPEG/KC.jpg" alt="Dice" class="card" id="card-18"></img>
+    <img src="/images/JPEG/QC.jpg" alt="Dice" class="card" id="card-19"></img>
+    <img src="/images/JPEG/JC.jpg" alt="Dice" class="card" id="card-20"></img>
+    <img src="/images/JPEG/AS.jpg" alt="Dice" class="card" id="card-21"></img>
+    <button onclick="rowSelector3()" class="btn-roll" id = 'button3'><i class="ion-ios-plus-outline"></i>Third</button>
   </div>
-  <h3> Which ROW has your card? </h3>
-  <button class="btn-new"><i class="ion-ios-plus-outline"></i>First</button>
-  <button class="btn-roll"><i class="ion-ios-loop"></i>Second</button>
-  <button class="btn-hold"><i class="ion-ios-download-outline"></i>Third</button>
-
+  <div id = 'reveal-card'>
+    <img src="/images/JPEG/2C.jpg" alt="Dice" class="card" id="card-22"></img>
+    <button onclick="imageSelector()" id = 'start-game-button'>Start Game</button>
+  </div>
+  <div>
+  </div>
 </div>
