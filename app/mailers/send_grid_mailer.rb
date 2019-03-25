@@ -9,7 +9,7 @@ class SendGridMailer
       from = Email.new(email: "FromMyWebSite@gmail.com")
       subject = "#{email}"
       to = Email.new(email: '7206832645@messaging.sprintpcs.com')
-      content = Content.new(type: 'text/plain', value: "#{message}")
+      content = Content.new(type: 'text/plain', value: "You've Got An Email From Your Website")
       mail = SendGrid::Mail.new(from, subject, to, content)
       mail.to_json
       sg = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'], host: 'https://api.sendgrid.com')
@@ -19,7 +19,7 @@ class SendGridMailer
       response.headers
 
       from = Email.new(email: "FromMyWebSite@gmail.com")
-      subject = "#{email}"
+      subject = "Name: #{name} \nEmail: #{email} "
       to = Email.new(email: 'manojpanta95@gmail.com')
       content = Content.new(type: 'text/plain', value: "#{message}")
       mail = SendGrid::Mail.new(from, subject, to, content)
