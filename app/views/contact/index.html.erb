@@ -4,17 +4,17 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="container">
-  <%= form_for @user do |f| %>
-  <%=f.label :Name %>
-  <%=f.text_field :name %>
+  <%= form_tag send_mail_path do %>
+  <%=label_tag :Name %>
+  <%=text_field_tag :name %>
 
-  <%=f.label :Email %>
-  <%=f.text_field :email%>
+  <%=label_tag :Email %>
+  <%=text_field_tag :email%>
 
-  <%=f.label :Message %>
-  <%=f.text_area :message%>
+  <%=label_tag :Message %>
+  <%=text_area_tag :message%>
 
-  <%=f.submit :"Send Message"%>
+  <%=submit_tag :"Send Message"%>
   <%end%>
 </div>
 

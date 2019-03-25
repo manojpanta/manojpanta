@@ -4,9 +4,8 @@ Rails.application.routes.draw do
   root to: "landingpage#show"
 
 
-
   resources :resume, only: [:index]
-  resources :users, only: [:create]
+  post '/send_mail', to: 'sendmail#create'
 
   get '/credit_check',to: 'creditchecks#new'
   post '/credit_check', to: 'creditchecks#create'

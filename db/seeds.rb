@@ -1,1 +1,0 @@
-User.destroy_all
