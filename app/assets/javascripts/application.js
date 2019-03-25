@@ -19,7 +19,7 @@ var row3 = []
 var deck =[]
 var click_counter = 1
 function imageSelector() {
-  document.querySelector('.magic-box').style.height = '600px';
+  document.querySelector('.magic-box').style.height = '620px';
   document.querySelector('#second-row-div').style.marginLeft = '25px';
   document.querySelector('#box-1').style.marginRight = '7px';
   document.querySelector('#question').innerHTML = "Choose One of the 21 cards below and remember throughout this game. <br>Which row has your card? Press `First`, `Second` or `Third`. ";
