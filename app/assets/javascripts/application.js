@@ -22,7 +22,7 @@ function imageSelector() {
   document.querySelector('.magic-box').style.height = '600px';
   document.querySelector('#second-row-div').style.marginLeft = '25px';
   document.querySelector('#box-1').style.marginRight = '7px';
-  document.querySelector('#question').innerHTML = "Choose One of the 21 cards below and remember throughout this game. Which row has your card? ";
+  document.querySelector('#question').innerHTML = "Choose One of the 21 cards below and remember throughout this game. <br>Which row has your card? Press `First`, `Second` or `Third`. ";
   var card1 = document.querySelector('#card-22');
   card1.style.display = 'none';
   var button = document.querySelector('#button1');
@@ -287,7 +287,7 @@ function updateAccordingly() {
   if (click_counter == 4) {
     tellAnswer(row2[3]);
   }else if (click_counter == 2) {
-    document.querySelector('#question').innerHTML = "Now, Which row has your card?";
+    document.querySelector('#question').innerHTML = "Now, Which row did your card move to?";
   }else if ( click_counter == 3) {
     document.querySelector('#question').innerHTML = "Once more, Which row has your card?";
   }

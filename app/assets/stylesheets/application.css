@@ -211,8 +211,10 @@
   text-decoration: none;
   font-stretch: unset;
   font-family: monospace;
-  font-size: x-large;
+  font-size: 21px;
   margin-bottom: 0px;
+  padding-left: 35px;
+  padding-right: 35px;
 }
 #reveal-card {
   display: flex;
