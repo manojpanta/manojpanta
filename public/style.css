@@ -23,4 +23,6 @@
   display: grid;
   margin-left: 10px;
   margin-right: 10px;
+  background-image: repeating-linear-gradient( 45deg, #878E88, #878E91, #76BED0, #76BED0 );
+
 }
