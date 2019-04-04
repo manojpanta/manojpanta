@@ -20,7 +20,9 @@ var deck =[]
 var click_counter = 1
 function imageSelector() {
   document.querySelector('.magic-box').style.height = '620px';
+  document.querySelector('.magic-box').style.transition = '3s';
   document.querySelector('#second-row-div').style.marginLeft = '25px';
+  document.querySelector('#second-row-div').transition = '3s';
   document.querySelector('#box-1').style.marginRight = '7px';
   document.querySelector('#question').innerHTML = "Choose One of the 21 cards below and remember throughout this game. <br>Which row has your card? Press `First`, `Second` or `Third`. ";
   var card1 = document.querySelector('#card-22');
@@ -225,6 +227,7 @@ function tellAnswer(position) {
   card1.style.border= '3px solid';
   card1.style.borderRadius= '15px';
   card1.src = "/images/JPEG/" + position;
+  card1.style.transform = rotate('60deg');
   document.querySelector('#question').innerHTML = "Magic Time!!!!This is your card";
   click_counter = 1
 }
