@@ -1,2 +1,18 @@
-<h1>ClearVision#index</h1>
-<p>Find me in app/views/clear_vision/index.html.erb</p>
+<!-- <link rel="stylesheet" href="/mystory/show.css" title="CSS" type="text/css"/>
+<div class="container">
+  <%= form_for @image do |form| %>
+  <h2 class='linkedlist-description'>This Program is based on Luhn's algorithm, also known as the "modulus 10" or "mod 10" algorithm, named after IBM scientist Hans Peter Luhn, is a simple checksum formula used to validate a variety of identification numbers, such as credit card numbers, IMEI numbers, National Provider Identifier numbers in the United States<br><br>
+    <%= form.file_field :avatar %>
+    <%= form.submit "Covert Now"%>
+  <% end %>
+<div> -->
+
+<link rel="stylesheet" href="/mystory/show.css" title="CSS" type="text/css"/>
+<div class="container">
+  <%= form_for @image do |form| %>
+  <h2 class='linkedlist-description'>OCR (optical character recognition) is the use of technology to distinguish printed or handwritten text characters inside digital images of physical documents, such as a scanned paper document. The basic process of OCR involves examining the text of a document and translating the characters into code that can be used for data processing. OCR is sometimes also referred to as text recognition.<br>
+    <br>This program uses google's Cloud Vision API.Choose any file that contains texts and see the  conversion happen below!! Also detects most common types of links.<br><br>
+    <%= form.file_field :avatar %>
+    <%= form.submit "Covert Now"%>
+  <% end %>
+</div>

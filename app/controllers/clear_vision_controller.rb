@@ -3,7 +3,7 @@ class ClearVisionController < ApplicationController
     @image = Image.new
   end
 
-  def show
+  def create
     if !params['image']
       redirect_to root_path, alert: "Please Choose a File and Try Again!!"
     else
@@ -13,6 +13,10 @@ class ClearVisionController < ApplicationController
       render :show, :locals => {:pic => this.split("\n")}
       image.destroy
     end
+  end
+
+  def show
+    
   end
 
   private
