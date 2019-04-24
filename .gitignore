@@ -26,3 +26,6 @@ Procfile.
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 /config/initializers/app_env_vars.rb
+
+# Ignore application configuration
+/config/application.yml

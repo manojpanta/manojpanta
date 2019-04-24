@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  get 'clear_vision/index'
+  get 'clear_vision/show'
   root to: "landingpage#show"
 
 
@@ -19,6 +21,9 @@ Rails.application.routes.draw do
   post '/night_reader', to: 'nightwriter#read'
 
   get '/magic_game', to: 'magic_game#new'
+  get '/clear_vision', to: 'clear_vision#index'
+  post '/images', to: 'clear_vision#create'
+
   resources :contact, only: [:index]
   resources :mystory, only: [:index]
   resources :projects, only: [:index, :show]

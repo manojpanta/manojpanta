@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="/mystory/show.css" title="CSS" type="text/css"/>
+<div class="container">
+    <!-- <p class="result-check"> -->
+    <h2 id='clear-vision-result'>
+    <%pic.each do |p|%>
+      <% p.split(" ").each do |t| %>
+        <% if t.include?(".com") || t.include?(".mil") || t.include?(".us") || t.include?(".edu") || t.include?(".info") || t.include?(".io") || t.include?(".gov") || t.include?(".org") || t.include?(".net")%>
+          <% if t.start_with?("https://") %>
+            <%=link_to t, t, class: 'detected-link'%>
+          <% else %>
+            <%=link_to t, "http://" + t , class: 'detected-link'%>
+          <% end %>
+        <% else %>
+          <%= t %>
+        <% end %>
+      <% end %><br>
+    <% end %></h2>
+    <br>
+    <br>
+    <h4 class='link-to-new1'><%=link_to 'Try New One', clear_vision_path%>
+</div>

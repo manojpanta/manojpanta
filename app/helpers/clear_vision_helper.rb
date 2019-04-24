@@ -1,0 +1,2 @@
+module ClearVisionHelper
+end

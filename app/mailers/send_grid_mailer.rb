@@ -2,7 +2,6 @@ require 'sendgrid-ruby'
 require 'json'
 class SendGridMailer
   include SendGrid
-
   def self.contact_me(name, email, message)
     from = Email.new(email: "FromMyWebSite@gmail.com")
     subject = "From:#{email}"

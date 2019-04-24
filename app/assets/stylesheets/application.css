@@ -227,3 +227,28 @@
   width: 200px;
   align-self: center;
 }
+input#image_avatar {
+  font-size: 24px;
+  background: black;
+  color: wheat;
+  padding: 3px 8px 8px 8px;
+  border-radius: 5px;
+}
+
+#clear-vision-result {
+  font-family: inherit;
+  font-weight: normal;
+}
+
+a.detected-link {
+  font-family: none;
+  text-decoration: underline;
+}
+
+h1#side-projects-header {
+    font-family: cursive;
+    text-shadow: 1px 1px aliceblue;
+    font-size: 40px;
+    margin-bottom: 0px;
+    text-decoration: underline;
+}
