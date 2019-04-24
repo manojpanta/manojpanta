@@ -10,7 +10,7 @@
           <% else %>
             <%=link_to t, "http://" + t , class: 'detected-link'%>
           <% end %>
-        <% elsif (t.length == 12 &&  t.split("-").join.scan(/\D/).empty?) %>
+        <% elsif (t.length >= 10 && t.length <= 18 && t.count("a-zA-Z") == 0) %>
           <%=link_to t, "tel:" + t, class: 'detected-link'%>
         <% else %>
           <%= t %>
