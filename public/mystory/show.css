@@ -89,19 +89,18 @@ hr {
   padding-left: 30px;
   padding-bottom: 30px;
   overflow: scroll;
-
+  justify-content: space-evenly;
 }
 
 .individual-div {
   border-radius: 30px;
   height: 300px;
-  width: 50%;
   border: 3px solid beige;
   margin-right:  30px;
   overflow: scroll;
   display: table;
   padding: 20px;
-
+  width: 300px;
 }
 
 h2 {
