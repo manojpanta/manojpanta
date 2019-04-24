@@ -5,11 +5,13 @@
     <%pic.each do |p|%>
       <% p.split(" ").each do |t| %>
         <% if t.include?(".com") || t.include?(".mil") || t.include?(".us") || t.include?(".edu") || t.include?(".info") || t.include?(".io") || t.include?(".gov") || t.include?(".org") || t.include?(".net")%>
-          <% if t.start_with?("https://") %>
+          <% if t.start_with?("https://")%>
             <%=link_to t, t, class: 'detected-link'%>
           <% else %>
             <%=link_to t, "http://" + t , class: 'detected-link'%>
           <% end %>
+        <% elsif (t.length == 12 &&  t.split("-").join.scan(/\D/).empty?) %>
+          <%=link_to t, t, class: 'detected-link'%>
         <% else %>
           <%= t %>
         <% end %>
