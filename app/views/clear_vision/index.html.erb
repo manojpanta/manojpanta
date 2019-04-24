@@ -11,7 +11,7 @@
 <div class="container">
   <%= form_for @image do |form| %>
   <h2 class='linkedlist-description'>OCR (optical character recognition) is the use of technology to distinguish printed or handwritten text characters inside digital images of physical documents, such as a scanned paper document. The basic process of OCR involves examining the text of a document and translating the characters into code that can be used for data processing. OCR is sometimes also referred to as text recognition.<br>
-    <br>This program uses google's Cloud Vision API.Choose any file that contains texts and see the  conversion happen below!! Also detects most common types of links.<br><br>
+    <br>This program uses google's Cloud Vision API. Also detects most common types of links!! Try one of your screenshots that has links you want to click on!!<br><br>
     <%= form.file_field :avatar %>
     <%= form.submit "Covert Now"%>
   <% end %>
