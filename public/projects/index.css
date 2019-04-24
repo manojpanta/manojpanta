@@ -79,9 +79,9 @@ hr {
 
 .facebook {
   border-radius:20px 0px 20px 0px;
-  padding-left: 50px;
+  padding-left: 20px;
   float: left;
-  padding-right: 50px;
+  padding-right: 20px;
 
 }
 button.facebook:hover  {
