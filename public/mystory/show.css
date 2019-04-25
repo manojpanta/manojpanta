@@ -50,7 +50,7 @@ center a {
   margin-top: 125px;
   margin-left: 10px;
   margin-right: 10px;
-  box-shadow: 2px 7px 30px 0px #E6E3E8;
+  box-shadow: 2px 7px 300px 0px;
 
 }
 
@@ -80,6 +80,7 @@ hr {
   margin-top: 29px;
   margin-left: 10px;
   margin-right: 10px;
+  box-shadow: 2px 7px 30px 0px;
 }
 
 .flex-container{
@@ -100,7 +101,7 @@ hr {
   overflow: scroll;
   display: table;
   padding: 20px;
-  width: 300px;
+  width: 25%;
 }
 
 h2 {
@@ -208,7 +209,7 @@ input[type=submit]:hover {
     border: 3px solid black;
     margin-left: 10px;
     margin-right: 10px;
-    box-shadow: 2px 7px 30px 0px #E6E3E8;
+    box-shadow: 2px 7px 50px 0px;
 }
 
 label {
